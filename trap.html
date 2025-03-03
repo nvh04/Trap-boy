@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tỏ tình</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .heart {
+            font-size: 100px;
+            color: red;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #no {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Em có đồng ý làm người yêu anh không? ❤️</h1>
+    <div class="heart">&#10084;</div>
+    <div class="buttons">
+        <button onclick="acceptLove()">Có</button>
+        <button id="no" onmouseover="moveNoButton()">Không</button>
+    </div>
+    
+    <script>
+        function acceptLove() {
+            alert("Anh biết mà! Yêu em ❤️");
+        }
+        
+        function moveNoButton() {
+            var noButton = document.getElementById("no");
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
